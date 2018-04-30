@@ -1,9 +1,11 @@
 package dev.vbonnet.flutterwebbrowser;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.support.customtabs.CustomTabsIntent;
+import java.lang.System;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -33,10 +35,19 @@ public class FlutterWebBrowserPlugin implements MethodCallHandler {
       case "openWebPage":
          openUrl(call, result);
          break;
+      case "closeWebPage":
+        closeWebPage(call, result);
+        break;
       default:
         result.notImplemented();
         break;
     }
+  }
+
+  private void closeWebPage(MethodCall call, Result result) {
+    Intent i = activity.getIntent();
+    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    activity.startActivity(i);
   }
 
     private void openUrl(MethodCall call, Result result) {

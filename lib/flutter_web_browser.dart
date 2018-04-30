@@ -17,4 +17,8 @@ class FlutterWebBrowser {
     });
   }
 
+  static Future<dynamic> closeWebPage() {
+    return _channel.invokeMethod('closeWebPage', {});
+  }
+
 }

@@ -4,19 +4,19 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `/Users/victor/dev/flutter/bin/cache/artifacts/engine/ios-release`)
-  - flutter_web_browser (from `/Users/victor/dev/github/flutter_web_browser/ios`)
+  - Flutter (from `/Users/yannik/development/flutter/bin/cache/artifacts/engine/ios`)
+  - flutter_web_browser (from `/Users/yannik/Documents/Fehse/flutter_web_browser/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: /Users/victor/dev/flutter/bin/cache/artifacts/engine/ios-release
+    :path: "/Users/yannik/development/flutter/bin/cache/artifacts/engine/ios"
   flutter_web_browser:
-    :path: /Users/victor/dev/github/flutter_web_browser/ios
+    :path: "/Users/yannik/Documents/Fehse/flutter_web_browser/ios"
 
 SPEC CHECKSUMS:
-  Flutter: d674e78c937094a75ac71dd77e921e840bea3dbf
-  flutter_web_browser: ce28a681222b9f336dbb02cd3b1f885dc007f73c
+  Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
+  flutter_web_browser: 6a716fdf08f528f7c527eeae1fef13680172bb81
 
 PODFILE CHECKSUM: 351e02e34b831289961ec3558a535cbd2c4965d2
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:async';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
 
 void main() {
@@ -14,7 +15,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   
   openBrowserTab() async {
-    await FlutterWebBrowser.openWebPage(url: "https://flutter.io/", androidToolbarColor: Colors.deepPurple);
+    var page = FlutterWebBrowser.openWebPage(url: "https://flutter.io/", androidToolbarColor: Colors.deepPurple);
+    await new Future.delayed(const Duration(seconds: 3));
+    await FlutterWebBrowser.closeWebPage();
+    await page;
   }
 
   @override

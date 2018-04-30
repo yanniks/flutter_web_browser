@@ -22,6 +22,12 @@
         SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:URL];
         [viewController presentViewController:sfvc animated:YES completion:nil];
         result(nil);
+    } else if ([@"closeWebPage" isEqualToString:call.method]) {
+        UIViewController *viewController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+        if ( viewController.presentedViewController && !viewController.presentedViewController.isBeingDismissed ) {
+            viewController = viewController.presentedViewController;
+        }
+        [viewController dismissViewControllerAnimated:YES completion:nil];
     } else {
         result(FlutterMethodNotImplemented);
     }
